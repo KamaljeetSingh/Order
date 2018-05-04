@@ -1,0 +1,13 @@
+<div class="home">
+  <div class="brand-name">
+    <span class="name">SHOPPIFY</span>
+    <span class="tag">buy what you love</span>
+  </div>
+  <div class="col-md-6">
+    <app-login (toggle)="toggleOpacity($event)" [opaque]="isOpaque"></app-login>
+  </div>
+  <div class="col-md-6">
+    <app-signup (toggle)="toggleOpacity($event)" [opaque]="!isOpaque"></app-signup>
+  </div>
+</div>
+

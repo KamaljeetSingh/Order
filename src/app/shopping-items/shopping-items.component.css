@@ -1,0 +1,38 @@
+.shopping .nav-bar{
+    width:100%;
+    padding: 10px;
+    height: 50px;
+    border-bottom: thin solid #B5B5B5;
+}
+
+.shopping .nav-bar .dropdown .user-option{
+    text-decoration: none;
+    color: lightgray;
+    float: right;
+    cursor: pointer;
+}
+
+.shopping .nav-bar .dropdown .user-option .fas{
+    font-size: 30px;
+}
+
+.shopping .nav-bar .dropdown .dropdown-menu{
+    float: right !important;
+    right: 0 !important;
+    top: 30px !important;
+    left: auto;
+    min-width: 100px;
+}
+
+.shopping .nav-bar .dropdown .dropdown-menu li{
+    text-align: right;
+}
+
+.shopping .nav-bar .dropdown .dropdown-menu li a{
+    text-decoration: none;
+    color: gray;
+    cursor: pointer;
+}
+
+
+

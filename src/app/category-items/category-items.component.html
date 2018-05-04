@@ -1,0 +1,9 @@
+<div class="categories">
+  <ul class="nav nav-tabs">
+    <li *ngFor="let category of categories" (click)="getProductsByCat(category.id)">
+      <a>{{category.name}}</a>
+    </li>
+  </ul>
+</div>
+<div class="items-body">
+</div>

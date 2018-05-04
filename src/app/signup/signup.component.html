@@ -1,0 +1,33 @@
+<div class="signUp-box" [class.lightOff]="opaque" (click)="emitEvent()">
+  <div class="center-box">
+    <div class="form-box">
+      <h3>SignUp</h3>
+      <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label class="center-block">Email ID:
+          <input class="form-control" formControlName="userid" 
+            onfocus="this.placeholder = '' " onblur="this.placeholder = 'Enter your id'"
+            placeholder="Enter your id" [class.valid-border]="signUpForm.controls.userid.valid">
+        </label>
+        </div>
+        <div class="form-group">
+          <label class="center-block">Name:
+          <input class="form-control" formControlName="name" 
+            onfocus="this.placeholder = '' " onblur="this.placeholder = 'Enter your name'"
+            placeholder="Enter your name" [class.valid-border]="signUpForm.controls.name.valid">
+        </label>
+        </div>
+        <div class="form-group">
+          <label class="center-block">Password:
+          <input type="password" class="form-control" formControlName="pass" 
+            onfocus="this.placeholder = '' " onblur="this.placeholder = 'Enter your password'"
+            placeholder="Enter your password" [class.valid-border]="signUpForm.controls.pass.valid"> 
+        </label>
+        </div>
+        <button class="btn btn-primary" [disabled]="!signUpForm.valid">Sign Up</button>
+      </form>
+      <div class="loader" *ngIf="loading">
+        <i class="fa fa-spinner fa-spin" style="font-size:26px"></i>
+      </div>
+    </div>
+  </div>
