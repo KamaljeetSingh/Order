@@ -7,22 +7,14 @@ import { ShoppingItemsComponent  } from './shopping-items/shopping-items.compone
 import { CategoryItemsComponent  } from './category-items/category-items.component';
 
 const routes: Routes = [
-    { path:'app', component: AppComponent },
-    { path:'home', component: HomeComponent, canActivate: [AuthGuardService] },
-    { 
-        path:'shopping', 
-        component: ShoppingItemsComponent,
-        children:[{
-            path: 'item/:category',
-            component: CategoryItemsComponent
-        }] 
+    { path:'home', component: HomeComponent, canActivate: [AuthGuardService] 
     },
-    { path:'', redirectTo: '/app', pathMatch:'full' }
+    { path:'', redirectTo: '/home', pathMatch:'full' }, 
 ]
 
 @NgModule({
     imports:[
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes) 
     ],
     exports: [RouterModule],
     providers: [AuthGuardService]

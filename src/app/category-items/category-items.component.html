@@ -1,9 +1,22 @@
 <div class="categories">
   <ul class="nav nav-tabs">
-    <li *ngFor="let category of categories" (click)="getProductsByCat(category.id)">
+    <li *ngFor="let category of categories;" [class.active]="category.name == activeName"
+      (click)="getProductsByCat(category.id); activeName = category.name">
       <a>{{category.name}}</a>
     </li>
   </ul>
 </div>
-<div class="items-body">
+<div class="items-body container-fluid">
+  <div class="boxes col-md-3" *ngFor="let product of products">
+    <div class="pro-box">
+      <div class="img-box">
+        <i class="fab fa-angular"></i>
+      </div>
+      <div class="info-box">
+        <h4><span>{{product.name}}</span></h4>
+        <h5><span>{{product.price | currency}}</span></h5>
+        <span>Only {{product.quantity}} left</span>
+      </div>
+    </div>
+  </div>
 </div>

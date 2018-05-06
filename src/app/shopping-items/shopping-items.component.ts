@@ -12,7 +12,6 @@ export class ShoppingItemsComponent implements OnInit {
       private activatedUrl: ActivatedRoute) { }
 
   ngOnInit() {
-    this.router.navigate(['./item',5],{relativeTo: this.activatedUrl});
   }
 
   logout(){

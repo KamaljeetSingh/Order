@@ -8,15 +8,15 @@ const childroutes: Routes = [{
     path:'shopping', 
     component: ShoppingItemsComponent,
     children:[{
-        path: 'item/:category',
-        component: CategoryItemsComponent
+        path: '',
+        component: CategoryItemsComponent,
     }] 
 },
 ]
 
 @NgModule({
     imports:[
-        RouterModule.forRoot(childroutes)
+        RouterModule.forChild(childroutes)
     ],
     exports: [RouterModule],
 })

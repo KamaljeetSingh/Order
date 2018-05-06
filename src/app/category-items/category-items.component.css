@@ -4,10 +4,65 @@
     margin-top: 2px;
 }
 
+.categories ul.nav{
+    padding-left: 10px;
+    background-color: #F3F3F3;
+}
+
 .categories li a{
     cursor: pointer;
 }
 
 .categories li:active, .shopping .categories li a:active{
     outline: none;
+}
+
+
+.items-body{
+    clear: both;
+    margin-top: 1%;
+}
+
+.items-body .boxes{
+    padding: 2%;
+    border-bottom: thin solid lightgray;
+    border-right: thin solid lightgray;
+}
+
+.items-body .boxes:hover{
+    box-shadow: inset 0 0 15px #E1E1E1;
+    cursor: pointer;
+}
+
+.items-body .pro-box{
+    padding: 1%;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.items-body .pro-box .img-box{
+    margin: 0 auto;
+    height: 150px;
+    width: 200px;
+}
+
+.items-body .pro-box .img-box .fab{
+    font-size: 150px;
+    color: #7EA6BF;
+}
+
+
+.items-body .pro-box .info-box{
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+.items-body .pro-box .info-box h4{
+    color: gray;
+}
+
+.items-body .pro-box .info-box h5{
+    color: #7EA6BF;
 }

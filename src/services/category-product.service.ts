@@ -7,6 +7,7 @@ import { RequestOptions } from '@angular/http';
 @Injectable()
 export class CategoryProductService {
   private categoryUrl = 'api/categories';
+  private productUrl = 'api/products';
 
   
   constructor(private http: HttpClient) { }
@@ -15,8 +16,8 @@ export class CategoryProductService {
     return this.http.get<Category[]>(this.categoryUrl);
   }
 
-  // getProductsByCat(id:number): Observable<Product[]>{
-  //   // return this.http.get<Product[]>(this.)
-  // }
+  getProductsByCat(id:number): Observable<Product[]>{
+    return this.http.get<Product[]>(this.productUrl + '?category=' + id);
+  }
 
 }
